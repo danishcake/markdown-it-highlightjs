@@ -10,8 +10,8 @@
   "types": "types/index.d.ts",
   "repository": "valeriangalliat/markdown-it-highlightjs",
   "scripts": {
-    "build": "esbuild src/*.ts --format=cjs --outdir=dist",
-    "lint": "ts-standard src/*.ts test/*.js",
+    "build": "esbuild src/index.ts src/core.ts --format=cjs --outdir=dist",
+    "lint": "ts-standard src/index.ts src/core.ts test/test.js",
     "prepack": "npm run prepare && npm run lint && npm run type-check && npm test && npm run test-ts-import",
     "prepare": "npm run build && npm run type-declarations",
     "test": "npm run build && mocha",
